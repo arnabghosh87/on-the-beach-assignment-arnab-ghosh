@@ -1,0 +1,30 @@
+.bottom-left {
+    position:absolute;
+    bottom:0px;
+    background-color: white;
+}
+
+.containerImg{
+    position:relative;
+    text-align: center;
+    color: black;
+}
+
+.cardDiv{
+    display:block;
+    flex-direction:column;
+    justify-content: left;
+}
+
+p{
+    font-size:smaller;
+}
+
+a {
+    display:block;
+    text-decoration:none;
+}
+
+a span{
+    display:inline-block;
+}
