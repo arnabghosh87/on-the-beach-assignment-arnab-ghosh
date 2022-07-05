@@ -1,0 +1,11 @@
+.vl {
+    color: blue;
+    border-left: 6px solid;
+    height: 43px;
+}
+
+.navbar-brand {
+    color: blue;
+    font-size: 14px;
+    font-weight: bold;
+}

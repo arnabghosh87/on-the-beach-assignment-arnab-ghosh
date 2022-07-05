@@ -2,6 +2,8 @@
     position:absolute;
     bottom:0px;
     background-color: white;
+    font-size:smaller;
+    padding-right: 10px;
 }
 
 .containerImg{
@@ -18,6 +20,15 @@
 
 p{
     font-size:smaller;
+}
+
+.card-footer {
+    font-size: smaller;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: yellow !important;
+    color: black !important;
 }
 
 a {

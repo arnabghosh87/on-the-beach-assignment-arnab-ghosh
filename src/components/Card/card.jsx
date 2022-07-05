@@ -1,7 +1,6 @@
 import React ,{ useState } from 'react';
 import './card.css';
-import hotelImage1 from '../../assets/hotel-image-1.png';
-import { AiOutlineArrowRight } from "react-icons/ai";
+import { FaAngleRight,FaAngleDown } from "react-icons/fa";
 import { Rating } from 'react-simple-star-rating';
 
 function Card({key,roomDetails}) {
@@ -16,19 +15,18 @@ function Card({key,roomDetails}) {
       </div>
     )
 
-
     const toggleFooter = () => {
         showFooter ? setReadMoreLinkText("Read more about this hotel") : setReadMoreLinkText("Read less about this hotel")
         setShowFooter(!showFooter)
     }
   return (
-    <div className="card">
+    <div className="card m-2">
         <div className="row no-gutters">
             <div className="col-lg-8 containerImg">
                 <img src={roomDetails.Image} className="card-img-top" alt="..." />
-                <div className="bottom-left" onClick={toggleFooter}><AiOutlineArrowRight/> {readMoreLinkText}</div>
+                <div className="bottom-left" onClick={toggleFooter}>{ showFooter ? <FaAngleDown /> : <FaAngleRight />} {readMoreLinkText}</div>
             </div>
-            <div className='col-lg-4 '>
+            <div className='col-lg-4 mt-2'>
                 <div className='card-block px-1 cardDiv'>
                     <h5 className='card-title text-left'> {roomDetails.Title}</h5>
                     <p className='card-text'> {roomDetails.Address}</p>
@@ -43,7 +41,6 @@ function Card({key,roomDetails}) {
             </div>
         </div>
         { showFooter ? <FooterDiv /> : null}
-      
     </div>
   );
 }
